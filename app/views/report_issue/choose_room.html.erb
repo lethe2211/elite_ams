@@ -1,0 +1,12 @@
+<% content_for :title, "Report an issue - Room selection" %>
+
+<h1>Which room?</h1>
+
+<%= form_tag(report_issue_choose_asset_category_path, method: "post") do %>
+  <div class="form-group">
+    <%= label_tag(:room_id, "Room") %>
+    <%= select_tag(:room_id, options_from_collection_for_select(Room.all, :id, :name), class: "form-control") %>
+  </div>
+  <%= submit_tag("Next", class: "btn btn-primary btn-block") %>
+<% end %>
+

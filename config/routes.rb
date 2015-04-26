@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
+  get 'report_issue/choose_room'
+
+  post 'report_issue/choose_asset_category'
+
+  post 'report_issue/choose_asset'
+
+  post 'report_issue/describe'
+
+  post 'report_issue/thank_you'
+
+  get 'report_issue/how_to'
+
+  resources :rooms
+  resources :reports
+  resources :assets
+  resources :asset_categories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

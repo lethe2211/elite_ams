@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+room_1:
+  name: Room 1
+
+room_2:
+  name: Room 2

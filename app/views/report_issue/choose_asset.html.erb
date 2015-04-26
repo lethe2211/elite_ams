@@ -1,0 +1,19 @@
+<% content_for :title, "Report an issue - Asset selection" %>
+
+<h1>Which asset?</h1>
+
+<%= form_tag(report_issue_describe_path, method: "post") do %>
+  <div class="form-group">
+    <%= label_tag(:room_id, "Room") %>
+    <%= select_tag(:room_id, options_for_select({@room.name => @room.id}), {readonly: true, class: "form-control"}) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:asset_category_id, "Asset category") %>
+    <%= select_tag(:asset_category_id, options_for_select({@asset_category.name => @asset_category.id}), {readonly: true, class: "form-control"}) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:asset_id, "Asset") %>
+    <%= select_tag(:asset_id, options_from_collection_for_select(Asset.all, :id, :description), class: "form-control") %>
+  </div>
+  <%= submit_tag("Next", class: "btn btn-primary btn-block") %>
+<% end %>

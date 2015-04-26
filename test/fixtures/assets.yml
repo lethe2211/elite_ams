@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+chair_1:
+  description: Blue chair
+  room: room_1
+  asset_category: chair
+
+chair_2:
+  description: Red chair
+  room: room_1
+  asset_category: chair
+
+chair_3:
+  description: Blue chair
+  room: room_2
+  asset_category: chair
+
+chair_4:
+  description: Blue chair
+  room: room_2
+  asset_category: chair
+
+table_1:
+  description: Long table
+  room: room_2
+  asset_category: table
+
+laptop_1:
+  description: PC1
+  room: room_1
+  asset_category: laptop
+
+laptop_2:
+  description: Rakuten PC model AEE123
+  room: room_2
+  asset_category: laptop
+
+laptop_3:
+  description: Rakuten PC model AEE123
+  room: room_2
+  asset_category: laptop

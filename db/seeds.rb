@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+case Rails.env
+when 'development'
+  Room.delete_all
+  AssetCategory.delete_all
+  Asset.delete_all
+  Report.delete_all
+end

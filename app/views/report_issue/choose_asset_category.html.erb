@@ -1,0 +1,15 @@
+<% content_for :title, "Report an issue - Asset category selection" %>
+
+<h1>Which category of asset?</h1>
+
+<%= form_tag(report_issue_choose_asset_path, method: "post") do %>
+  <div class="form-group">
+    <%= label_tag(:room_id, "Room") %>
+    <%= select_tag(:room_id, options_for_select({@room.name => @room.id}), {readonly:true, class: "form-control"}) %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:asset_category_id, "Asset category") %>
+    <%= select_tag(:asset_category_id, options_from_collection_for_select(AssetCategory.all, :id, :name), class: "form-control") %>
+  </div>
+  <%= submit_tag("Next", class: "btn btn-primary btn-block") %>
+<% end %>

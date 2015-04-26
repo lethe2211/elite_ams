@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+report_1:
+  description: The screen is broken.
+  room: room_1
+  asset_category: laptop
+  asset: laptop_2
+
+report_2:
+  description: There are no chairs in this room!!!
+  room: room_2
+  asset_category: chair
