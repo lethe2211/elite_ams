@@ -9,7 +9,7 @@
   </div>
   <div class="form-group">
     <%= label_tag(:asset_category_id, "Asset category") %>
-    <%= select_tag(:asset_category_id, options_from_collection_for_select(AssetCategory.all, :id, :name), class: "form-control") %>
+    <%= select_tag(:asset_category_id, options_from_collection_for_select(@asset_categories, :id, :name), class: "form-control") %>
   </div>
   <%= submit_tag("Next", class: "btn btn-primary btn-block") %>
 <% end %>

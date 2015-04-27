@@ -7,6 +7,7 @@ class ReportIssueController < ApplicationController
   # POST
   def choose_asset_category
     @room = Room.find(params[:room_id])
+    @asset_categories = AssetCategory.joins({:assets => :room}).where(:rooms => {id: params[:room_id]}).uniq
   end
 
   # POST
